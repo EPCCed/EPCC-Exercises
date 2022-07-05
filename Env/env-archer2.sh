@@ -1,5 +1,5 @@
 #!/bin/bash
 
 CC=cc
-#CFLAGS=
-#LFLAGS=
+CFLAGS=-g
+LFLAGS=-lm
