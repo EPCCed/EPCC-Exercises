@@ -1,0 +1,68 @@
+Runs done in early June 2015
+
+aprun -n 4 ./cfd 12 50000 1.5
+
+Cray:
+
+Loops, -g
+
+cfd.o39919: Time for  50000 iterations was   40.26     seconds
+
+Loops, no -g
+
+cfd.o39916: Time for  50000 iterations was   6.632     seconds
+
+Array syntax, -g
+
+cfd.o39918: Time for  50000 iterations was   64.13     seconds
+
+Array syntax, no -g
+
+cfd.o39917: Time for  50000 iterations was   6.666     seconds
+
+
+
+Intel:
+
+Loops, -g
+
+cfd.o39922: Time for  50000 iterations was   7.459     seconds
+
+Loops, no -g
+
+cfd.o39923: Time for  50000 iterations was   7.482     seconds
+
+Array syntax, -g
+
+cfd.o39925: Time for  50000 iterations was   7.874     seconds
+
+Array syntax, no -g
+
+cfd.o39924: Time for  50000 iterations was   7.881     seconds
+
+
+GNU:
+
+Loops, no -g
+
+cfd.o39928: Time for  50000 iterations was   67.01     seconds
+
+Loops, -g
+
+cfd.o39929: Time for  50000 iterations was   67.05     seconds
+
+Loops, -O2 -mavx -ftree-vectorize -ffast-math -funroll-loops
+
+cfd.o39931: Time for  50000 iterations was   15.04     seconds
+
+Array syntax, -g
+
+cfd.o39926: Time for  50000 iterations was   37.02     seconds
+
+Array syntax, no -g
+
+cfd.o39927: Time for  50000 iterations was   36.58     seconds
+
+Array syntax, -O2 -mavx -ftree-vectorize -ffast-math -funroll-loops
+
+cfd.o39930: Time for  50000 iterations was   8.450     seconds

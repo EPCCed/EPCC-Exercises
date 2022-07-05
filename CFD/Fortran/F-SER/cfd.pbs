@@ -1,0 +1,15 @@
+#!/bin/bash --login
+
+#PBS -l select=1
+#PBS -l walltime=01:00:00
+#PBS -A d104
+#PBS -N cfd
+
+#Change to directory that the job was submitted from
+cd $PBS_O_WORKDIR
+
+aprun -n  1 ./cfd 4 50 > run1.log
+aprun -n  2 ./cfd 4 50 > run2.log
+aprun -n  4 ./cfd 4 50 > run4.log
+aprun -n  8 ./cfd 4 50
+aprun -n 16 ./cfd 4 50
