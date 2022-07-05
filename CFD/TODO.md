@@ -6,4 +6,3 @@
 - Check compilation of tex works with next directory structure.
 - Remove old documentation after dicussion with D.H.
 - Test compilation exercise on multiple systems.
-- Remove system spacific batch scripts from individual exercises.
