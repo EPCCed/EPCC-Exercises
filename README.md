@@ -10,7 +10,7 @@ Intructions for use:
 
 - Source the relevant **Env/env-${system}.sh** (e.g `source Env/env-archer2.sh`) script to configure your copilation environment for the course.
 
-- Work through the exercises using code in **${exerciseNamne}/${language}/${verision}** (e.g. Sharpen/C/C-OMP).
+- Work through the exercises using code in **./${exerciseNamne}/${language}/${verision}** (e.g. Sharpen/C/C-OMP).
 
 - To run a given exercise on the HPC nodes make a copy of the relevant **Batch/slurm-${system}.sh** script to your working directory and edit the script to set the applciation you wish to run.
 
