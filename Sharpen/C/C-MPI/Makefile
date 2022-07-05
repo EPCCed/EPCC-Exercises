@@ -11,9 +11,9 @@ MF=	Makefile
 #LFLAGS=	-lm
 
 #For Cirrus use mpicc
-CC=	mpicc
-CFLAGS=	-cc=icc -g -DC_MPI_PRACTICAL
-LFLAGS=	-lm
+#CC=	mpicc
+#CFLAGS=	-cc=icc -g -DC_MPI_PRACTICAL
+#LFLAGS=	-lm
 
 EXE=	sharpen
 

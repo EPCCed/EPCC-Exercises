@@ -18,6 +18,8 @@
 #include <stdlib.h>
 #include "sharpen.h"
 
+#define C_SERIAL_PRACTICAL
+
 int main(void)
 {
   double tstart, tstop, time;

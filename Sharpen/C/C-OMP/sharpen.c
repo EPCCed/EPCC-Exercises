@@ -25,6 +25,8 @@
 #include <omp.h>
 #include "sharpen.h"
 
+#define C_OPENMP_PRACTICAL
+
 int main(void)
 {
   int nthread;

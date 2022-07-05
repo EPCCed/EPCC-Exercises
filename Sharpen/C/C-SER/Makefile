@@ -8,10 +8,10 @@ MF=	Makefile
 #CC=	cc
 
 #For Cirrus use the Intel compiler
-CC=	icc
+#CC=	icc
 
-CFLAGS=	-g -DC_SERIAL_PRACTICAL
-LFLAGS=	-lm
+#CFLAGS=	-g -DC_SERIAL_PRACTICAL
+#LFLAGS=	-lm
 
 EXE=	sharpen
 
