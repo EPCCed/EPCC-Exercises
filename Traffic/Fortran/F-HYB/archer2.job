@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Slurm job options (name, compute nodes, job time)
+#SBATCH --job-name=xthi
+#SBATCH --time=00:05:00
+#SBATCH --output=%x-%j.out
+#SBATCH --nodes=2
+#SBATCH --tasks-per-node=32
+#SBATCH --cpus-per-task=4
+#SBATCH --partition=standard
+#SBATCH --qos=short
+#SBATCH --reservation=shortqos
+
+ulimit -s unlimited
+
+# This exercise is designed to explore process and thread placement
+# Use the "xthi" code to do this
+
+module -s load xthi
+
+export OMP_NUM_THREADS=4
+export OMP_PLACES=cores
+
+# The value of OMP_NUM_THREADS should be the same as "cpus-per-task"
+# The product of "cpus-per-task" and "tasks-per-node" should be 128
+# if you want to use all the cores on each node
+
+srun --unbuffered --distribution=block:block --hint=nomultithread xthi
