@@ -20,13 +20,13 @@ EXE=	sharpen
 SRC= \
 	sharpen.c \
 	dosharpen.c \
-	filter.c \
-	cio.c \
-	utilities.c
+	../C-Common/filter.c \
+	../C-Common/cio.c \
+	../C-Common/utilities.c
 
 INC = \
 	sharpen.h \
-	utilities.h
+	../C-Common/utilities.h
 
 #
 # No need to edit below this line
@@ -35,6 +35,10 @@ INC = \
 .SUFFIXES:
 .SUFFIXES: .c .o
 
+RSRC=	$(notdir $(SRC))
+
+ROBJ=	$(RSRC:.c=.o)
+
 OBJ=	$(SRC:.c=.o)
 
 .c.o:
@@ -42,10 +46,10 @@ OBJ=	$(SRC:.c=.o)
 
 all:	$(EXE)
 
-$(EXE):	$(OBJ)
-	$(CC) $(CFLAGS) -o $@ $(OBJ) $(LFLAGS)
+$(EXE):	$(ROBJ)
+	$(CC) $(CFLAGS) -o $@ $(ROBJ) $(LFLAGS) 
 
 $(OBJ):	$(MF) $(INC)
 
 clean:
-	rm -f $(OBJ) $(EXE) core
+	rm -f $(ROBJ) $(EXE) core

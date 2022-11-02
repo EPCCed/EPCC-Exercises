@@ -1,5 +1,5 @@
 #!/bin/bash
 
-CC=cc
-CFLAGS=-g
-LFLAGS=-lm
+export CC=cc
+export CFLAGS="-g -fopenmp"
+export LFLAGS="-lm"

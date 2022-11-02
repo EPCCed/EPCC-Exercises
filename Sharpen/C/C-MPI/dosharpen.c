@@ -20,7 +20,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
-#include "utilities.h"
+#include "../C-Common/utilities.h"
 #include "sharpen.h"
 
 void dosharpen(char *infile, int nx, int ny, MPI_Comm comm)
