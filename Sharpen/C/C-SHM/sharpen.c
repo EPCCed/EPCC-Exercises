@@ -25,8 +25,6 @@
 #include <shmem.h>
 #include "sharpen.h"
 
-#define C_OPENSHMEM_PRACTICAL
-
 /*
  * Data that must be in symmetric storage - easiest to simply delcare
  * small variables like this in the data segment.

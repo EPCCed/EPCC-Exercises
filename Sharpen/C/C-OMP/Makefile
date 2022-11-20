@@ -16,6 +16,12 @@ MF=	Makefile
 #LFLAGS=	-lm
 # could append -qopenmp 
 
+
+CC=${EPCC_OMP_CC}
+CFLAGS= ${EPCC_OMP_CFLAGS} -DC_OPENMP_PRACTICAL
+LFLAGS= ${EPCC_OMPLFLAGS}
+
+
 EXE=	sharpen
 
 SRC= \

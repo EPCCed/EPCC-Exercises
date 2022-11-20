@@ -25,8 +25,6 @@
 #include <mpi.h>
 #include "sharpen.h"
 
-#define C_MPI_PRACTICAL
-
 int main(void)
 {
   MPI_Comm comm;

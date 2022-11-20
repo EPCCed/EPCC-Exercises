@@ -6,27 +6,23 @@ MF=	Makefile
 # Intel (icc), or Cray (craycc) - has been chosen by loading the
 # appropriate PrgEnv module prior to compilation.
 
-#CC=	cc
-#CFLAGS=	-g -DC_MPI_PRACTICAL
-#LFLAGS=	-lm
+CC=${EPCC_MPI_CC}
+CFLAGS=${EPCC_MPI_CFLAGS} -DC_MPI_PRACTICAL
+LFLAGS=${EPCC_MPI_LFLAGS}
 
-#For Cirrus use mpicc
-#CC=	mpicc
-#CFLAGS=	-cc=icc -g -DC_MPI_PRACTICAL
-#LFLAGS=	-lm
 
 EXE=	sharpen
 
 SRC= \
 	sharpen.c \
 	dosharpen.c \
-	../C-Common/filter.c \
-	../C-Common/cio.c \
-	../C-Common/utilities.c
+	filter.c \
+	cio.c \
+	utilities.c
 
 INC = \
 	sharpen.h \
-	../C-Common/utilities.h
+	utilities.h
 
 #
 # No need to edit below this line
@@ -35,10 +31,6 @@ INC = \
 .SUFFIXES:
 .SUFFIXES: .c .o
 
-RSRC=	$(notdir $(SRC))
-
-ROBJ=	$(RSRC:.c=.o)
-
 OBJ=	$(SRC:.c=.o)
 
 .c.o:
@@ -46,10 +38,10 @@ OBJ=	$(SRC:.c=.o)
 
 all:	$(EXE)
 
-$(EXE):	$(ROBJ)
-	$(CC) $(CFLAGS) -o $@ $(ROBJ) $(LFLAGS) 
+$(EXE):	$(OBJ)
+	$(CC) $(CFLAGS) -o $@ $(OBJ) $(LFLAGS) 
 
 $(OBJ):	$(MF) $(INC)
 
 clean:
-	rm -f $(ROBJ) $(EXE) core
+	rm -f $(OBJ) $(EXE) core

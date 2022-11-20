@@ -27,8 +27,6 @@
 
 #include "sharpen.h"
 
-#define C_HYBRID_PRACTICAL
-
 int main(void)
 {
   MPI_Comm comm;
