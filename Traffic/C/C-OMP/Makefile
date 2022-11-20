@@ -1,9 +1,9 @@
 MF=	Makefile
 
-CC=	cc
+CC=${EPCC_OMP_CC}
 
-CFLAGS=	-O3 -fopenmp
-LFLAGS=	$(CFLAGS) -lm
+CFLAGS=${EPCC_OMP_CFLAGS} -O3
+LFLAGS=${EPCC_OMP_LFLAGS}
 
 EXE=	traffic
 

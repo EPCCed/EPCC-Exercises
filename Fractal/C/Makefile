@@ -12,9 +12,13 @@ MF=	Makefile
 #LFLAGS=	-lm
 
 # On cirrus use mpicc
-CC=	mpicc
-CFLAGS=	-cc=icc -g
-LFLAGS=	-lm
+#CC=	mpicc
+#CFLAGS=	-cc=icc -g
+#LFLAGS=	-lm
+
+CC=${EPCC_MPI_CC}
+CFLAGS=${EPCC_MPI_CFLAGS}
+LFLAGS=${EPCC_MPI_LFLAGS}
 
 EXE=	fractal
 

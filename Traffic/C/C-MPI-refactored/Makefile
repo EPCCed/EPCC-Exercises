@@ -1,13 +1,9 @@
 MF=	Makefile
 
-# For morar
-#CC=	mpicc
+CC=${EPCC_MPI_CC}
 
-# For ARCHER
-CC=	cc
-
-CFLAGS=
-LFLAGS=	-lm
+CFLAGS=${EPCC_MPI_CFLAGS}
+LFLAGS=${EPCC_MPI_LFLAGS}
 
 EXE=	traffic
 

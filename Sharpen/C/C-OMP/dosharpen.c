@@ -38,7 +38,7 @@ void dosharpen(char *infile, int nx, int ny)
   int i, j, k, l;
   double tstart, tstop, time;
   
-  int fuzzy[nx][ny];                   /* Will store the fuzzy input image when it is first read in from file                        */
+  double fuzzy[nx][ny];                   /* Will store the fuzzy input image when it is first read in from file                        */
   double fuzzyPadded[nx+2*d][ny+2*d];  /* Will store the fuzzy input image plus additional border padding                            */
   double convolution[nx][ny];          /* Will store the convolution of the filter with the fuzzy image                              */
   double sharp[nx][ny];                /* Will store the sharpened image obtained by adding the  convolution to the fuzzy image      */

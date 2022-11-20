@@ -12,12 +12,12 @@ export EPCC_SER_LFLAGS=-lm
 
 export EPCC_MPI_CC=cc
 export EPCC_MPI_CFLAGS=-g
-export EPCC_ARCH_MPI_LFLAGS=-lm
+export EPCC_MPI_LFLAGS=-lm
 
 ### OpenMP case ###
 
 export EPCC_OMP_CC=cc
-export EPCC_OMP_CFLAGS=-g -fopenmp
+export EPCC_OMP_CFLAGS="-g -fopenmp"
 export EPCC_OMP_LFLAGS=-lm
 
 ### Shared Mem case ###
@@ -29,7 +29,7 @@ export EPCC_SHM_LFLAGS=-lm
 ### Hybrid case ###
 
 export EPCC_HYB_CC=cc
-export EPCC_HYB_CFLAGS=-g
+export EPCC_HYB_CFLAGS="-g -fopenmp"
 export EPCC_HYB_LFLAGS=-lm
 
 ##### Fortran #####

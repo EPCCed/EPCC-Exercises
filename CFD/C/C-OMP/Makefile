@@ -6,9 +6,14 @@
 #LFLAGS=
 
 # For Cirrus or any standard Linux system
-CC=	icc
-CFLAGS=	-qopenmp
-LFLAGS=	-lm
+#CC=	icc
+#CFLAGS=	-qopenmp
+#LFLAGS=	-lm
+
+CC=${EPCC_OMP_CC}
+
+CFLAGS=${EPCC_OMP_CFLAGS}
+LFLAGS=${EPCC_OMP_LFLAGS}
 
 # System independent definitions
 
