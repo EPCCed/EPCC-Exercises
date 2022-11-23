@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ulimit -s unlimited
+
 ##### C #####
 
 ### Serial case ###
