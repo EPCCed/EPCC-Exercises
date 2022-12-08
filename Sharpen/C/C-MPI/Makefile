@@ -6,14 +6,10 @@ MF=	Makefile
 # Intel (icc), or Cray (craycc) - has been chosen by loading the
 # appropriate PrgEnv module prior to compilation.
 
-#CC=	cc
-#CFLAGS=	-g -DC_MPI_PRACTICAL
-#LFLAGS=	-lm
+CC=${EPCC_MPI_CC}
+CFLAGS=${EPCC_MPI_CFLAGS} -DC_MPI_PRACTICAL
+LFLAGS=${EPCC_MPI_LFLAGS}
 
-#For Cirrus use mpicc
-CC=	mpicc
-CFLAGS=	-cc=icc -g -DC_MPI_PRACTICAL
-LFLAGS=	-lm
 
 EXE=	sharpen
 
@@ -43,7 +39,7 @@ OBJ=	$(SRC:.c=.o)
 all:	$(EXE)
 
 $(EXE):	$(OBJ)
-	$(CC) $(CFLAGS) -o $@ $(OBJ) $(LFLAGS)
+	$(CC) $(CFLAGS) -o $@ $(OBJ) $(LFLAGS) 
 
 $(OBJ):	$(MF) $(INC)
 

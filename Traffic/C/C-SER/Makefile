@@ -1,9 +1,9 @@
 MF=	Makefile
 
-CC=	cc
+CC=${EPCC_SER_CC}
 
-CFLAGS=	-O3
-LFLAGS=	$(CLFAGS) -lm
+CFLAGS=${EPCC_SER_CFLAGS} -O3
+LFLAGS=${EPCC_SER_LFLAGS}
 
 EXE=	traffic
 

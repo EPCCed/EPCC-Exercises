@@ -11,9 +11,16 @@ MF=	Makefile
 #LFLAGS=	-lm
 
 #For Cirrus use icc
-CC=	icc
-CFLAGS=	-qopenmp -g -DC_OPENMP_PRACTICAL
-LFLAGS=	-lm
+#CC=	icc
+#CFLAGS=	-qopenmp -g -DC_OPENMP_PRACTICAL
+#LFLAGS=	-lm
+# could append -qopenmp 
+
+
+CC=${EPCC_OMP_CC}
+CFLAGS= ${EPCC_OMP_CFLAGS} -DC_OPENMP_PRACTICAL
+LFLAGS= ${EPCC_OMPLFLAGS}
+
 
 EXE=	sharpen
 

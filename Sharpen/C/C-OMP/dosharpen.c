@@ -29,6 +29,8 @@ void dosharpen(char *infile, int nx, int ny)
      only pixels within a (2d+1)*(2d+1) square centered on the pixel are used to 
      compute its new value. */
 
+  printf("debug0\n");
+
   double  norm = (2*d-1)*(2*d-1);
   double scale = 2.0;
   
@@ -37,13 +39,17 @@ void dosharpen(char *infile, int nx, int ny)
   
   int i, j, k, l;
   double tstart, tstop, time;
-  
-  int fuzzy[nx][ny];                   /* Will store the fuzzy input image when it is first read in from file                        */
+
+  double fuzzy[nx][ny];                   /* Will store the fuzzy input image when it is first read in from file                        */
+
   double fuzzyPadded[nx+2*d][ny+2*d];  /* Will store the fuzzy input image plus additional border padding                            */
-  double convolution[nx][ny];          /* Will store the convolution of the filter with the fuzzy image                              */
+
+   double convolution[nx][ny];          /* Will store the convolution of the filter with the fuzzy image                              */
+
   double sharp[nx][ny];                /* Will store the sharpened image obtained by adding the  convolution to the fuzzy image      */
+
   double sharpCropped[nx-2*d][ny-2*d]; /* Will store the sharpened image cropped to remove a border layer distorted by the algorithm */
-  
+
   char *outfile = "sharpened.pgm";
   
   /* Initialise image arrays */
@@ -55,7 +61,6 @@ void dosharpen(char *infile, int nx, int ny)
           sharp[i][j] = 0.0;
         }
     }
-  
   printf("Using a filter of size %d x %d\n", 2*d+1, 2*d+1);
   printf("\n");
 

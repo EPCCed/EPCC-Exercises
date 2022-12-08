@@ -1,10 +1,10 @@
 MF=	Makefile
 
 # For ARCHER
-CC=	cc
+CC=${EPCC_MPI_CC}
 
-CFLAGS=	-g
-LFLAGS=	-lm
+CFLAGS=${EPCC_MPI_CFLAGS}
+LFLAGS=${EPCC_MPI_LFLAGS}
 
 EXE=	traffic
 

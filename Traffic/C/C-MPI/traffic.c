@@ -20,6 +20,12 @@ int main(int argc, char **argv)
 
   double tstart, tstop;
 
+  if (argc != 2)
+  {
+     printf("Error: Incorrect number of arguments.\n");
+     return 0;
+  }
+
   MPI_Status status;
   int rank, size, nlocal, rankup, rankdown;
 
@@ -28,7 +34,7 @@ int main(int argc, char **argv)
 
   // Set target density of cars
 
-  density = 0.52;
+  density = atof(argv[1]);
 
   printf("Running message-passing traffic model\n");
 

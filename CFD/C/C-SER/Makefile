@@ -6,10 +6,14 @@
 #LFLAGS=
 
 # For Cirrus or any standard Linux system
-CC=	icc
-CFLAGS=	
-LFLAGS=	-lm
+#CC=	icc
+#CFLAGS=	
+#LFLAGS=	-lm
 
+CC=${EPCC_SER_CC}
+
+CFLAGS=${EPCC_SER_CFLAGS}
+LFLAGS=${EPCC_SER_LFLAGS}
 
 # System independent definitions
 

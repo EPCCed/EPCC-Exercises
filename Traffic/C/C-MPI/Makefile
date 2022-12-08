@@ -1,9 +1,9 @@
 MF=	Makefile
 
-CC=	cc
+CC=${EPCC_MPI_CC}
 
-CFLAGS=	-O3
-LFLAGS=	$(CFLAGS) -lm
+CFLAGS=${EPCC_MPI_CFLAGS} -O3
+LFLAGS=	${EPCC_MPI_LFLAGS}
 
 EXE=	traffic
 

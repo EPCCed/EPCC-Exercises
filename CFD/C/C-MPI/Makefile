@@ -6,10 +6,14 @@
 #LFLAGS=
 
 # For Cirrus or any standard Linux system
-CC=	mpicc
-CFLAGS=	-cc=icc
-LFLAGS=	-lm
+#CC=	mpicc
+#CFLAGS=	-cc=icc
+#LFLAGS=	-lm
 
+CC=${EPCC_MPI_CC}
+
+CFLAGS=${EPCC_MPI_CFLAGS}
+LFLAGS=${EPCC_MPI_LFAGS}
 
 # System independent definitions
 

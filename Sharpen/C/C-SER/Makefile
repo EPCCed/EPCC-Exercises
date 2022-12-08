@@ -1,17 +1,10 @@
 MF=	Makefile
 
-#COMPILER
+CC=${EPCC_SER_CC} 
 
-# On ARCHER, cc is a wrapper for whichever C compiler - GNU (gcc),
-# Intel (icc), or Cray (craycc) - has been chosen by loading the
-# appropriate PrgEnv module prior to compilation.
-#CC=	cc
+CFLAGS=${EPCC_SER_CFLAGS} -DC_SERIAL_PRACTICAL
 
-#For Cirrus use the Intel compiler
-CC=	icc
-
-CFLAGS=	-g -DC_SERIAL_PRACTICAL
-LFLAGS=	-lm
+LFLAGS=${EPCC_SER_LFLAGS}
 
 EXE=	sharpen
 
