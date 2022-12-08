@@ -14,7 +14,7 @@ export EPCC_SER_LFLAGS=-lm
 
 module load mpich/3/gcc/latest
 
-export EPCC_MPI_CC=mpicxx
+export EPCC_MPI_CC=mpicc
 export EPCC_MPI_CFLAGS=-g
 export EPCC_MPI_LFLAGS=-lm
 
@@ -32,7 +32,7 @@ export EPCC_SHM_LFLAGS=-lm
 
 ### Hybrid case ###
 
-export EPCC_HYB_CC=cc
+export EPCC_HYB_CC=mpicc
 export EPCC_HYB_CFLAGS="-g -fopenmp"
 export EPCC_HYB_LFLAGS=-lm
 
