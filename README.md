@@ -20,3 +20,4 @@ Intructions for onboarding a new system:
 - To onboard a new system please add a new **Env/env-${system}.sh** and **Batch/slurm-${system}.sh** script for the system you whish to use. 
  
 
+Licensed under 	CC-BY-4.0
